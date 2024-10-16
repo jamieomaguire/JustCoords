@@ -1,0 +1,48 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+  <Script file="JustCoords.lua"/>
+  <Frame name="JustCoords_PlayerFrame" parent="UIParent" hidden="false">
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="JustCoords_PlayerFrame_Text" hidden="false" inherits="GameFontNormal" text="">
+            <Color r="0.596" g="0.984" b="0.596" a="1"/>
+            <Anchors>
+              <Anchor point="TOPRIGHT" relativeTo="PlayerFrame" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="-30" y="12"/>
+                </Offset>
+              </Anchor>
+					</Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+			<OnUpdate>
+				GetCoordsForPlayerFrame()
+			</OnUpdate>
+		</Scripts>
+  </Frame>
+
+  <Frame name="JustCoords_WorldMapFrame" parent="WorldMapFrame" hidden="false" enableMouse="true" toplevel="true">
+    <Layers>
+      <Layer level="OVERLAY">
+         <FontString name="JustCoords_WorldMapFrame_Text" hidden="false" inherits="GameFontNormal" text="">
+            <Color r="0.596" g="0.984" b="0.596" a="1"/>
+            <Anchors>
+              <Anchor point="CENTER" relativeTo="WorldMapFrame" relativePoint="BOTTOMLEFT">
+                <Offset>
+                  <AbsDimension x="114" y="18"/>
+                </Offset>
+              </Anchor>
+					</Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+			<OnUpdate>
+				GetCoordsForWorldMapFrame()
+			</OnUpdate>
+		</Scripts>
+  </Frame>
+</Ui>

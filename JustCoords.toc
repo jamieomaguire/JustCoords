@@ -1,0 +1,8 @@
+## Interface: 11504
+## Title: JustCoords
+## Notes: Just map coordinates and nothing else.
+## Author: Jamie Maguire
+## Version: 0.1.0
+## X-Curse-Project-ID: 999999
+
+JustCoords.xml
